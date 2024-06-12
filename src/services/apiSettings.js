@@ -19,6 +19,8 @@ export async function updateSetting(newSetting) {
     .eq("id", 1)
     .single();
 
+    
+
   if (error) {
     console.error(error);
     throw new Error("Settings could not be updated");
