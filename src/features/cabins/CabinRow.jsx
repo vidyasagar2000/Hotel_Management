@@ -9,6 +9,7 @@ import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import Table from "../../ui/Table";
 import Menus from "../../ui/Menus";
+import { useNavigate } from "react-router-dom";
 
 // const TableRow = styled.div`
 //   display: grid;
@@ -52,6 +53,7 @@ const Discount = styled.div`
 function CabinRow({ cabin }) {
   const { isDeleting, deleteCabin } = useDeleteCabin();
   const { isCreating, createCabin } = useCreateCabin();
+  const naviagte = useNavigate();
 
   const {
     id: cabinId,
