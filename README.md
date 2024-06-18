@@ -1,6 +1,6 @@
 # Deployment Link
 
-https://vermillion-biscuit-6e26a4.netlify.app
+https://royal-palace.netlify.app/
  
 # React + Vite
 
