@@ -9,7 +9,7 @@ import { useSignup } from "./useSignup";
 
 function SignupForm() {
   const { signup, isLoading } = useSignup();
-  const { register, formState, getValues, handleSubmit } = useForm();
+  const { register, formState, getValues, handleSubmit, reset } = useForm();
   const { errors } = formState;
 
   function onSubmit({ fullName, email, password }) {
@@ -77,7 +77,12 @@ function SignupForm() {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button variation="secondary" type="reset" disabled={isLoading}>
+        <Button
+          variation="secondary"
+          type="reset"
+          onClick={reset}
+          disabled={isLoading}
+        >
           Cancel
         </Button>
         <Button disabled={isLoading}>Create new user</Button>
