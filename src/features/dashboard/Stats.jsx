@@ -6,8 +6,6 @@ import {
 } from "react-icons/hi2";
 import Stat from "./Stat";
 import { formatCurrency } from "../../utils/helpers";
-import SalesChart from "./SalesChart";
-import DurationChart from "./DurationChart";
 
 function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
   const numBookings = bookings?.length;
@@ -43,9 +41,6 @@ function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
         icon={<HiOutlineChartBar />}
         value={Math.round(occupanyRate * 100) + "%"}
       />
-      <div>Todays Activity</div>
-      <DurationChart confirmedStays={confirmedStays} />
-      <SalesChart bookings={bookings} numDays={numDays} />
     </>
   );
 }
